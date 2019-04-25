@@ -1,0 +1,27 @@
+#theme {
+  /* background-color: blue;  */
+  height: 100%;
+  width: 15%;
+  display: flex;
+  /* flex: 1; */
+  justify-content: center;
+  align-items: center;
+}
+
+#themeLink {
+  display: flex;
+  flex: 1;
+}
+
+#themeImage {
+  height: 40%;
+  width: 40%;
+}
+
+body {
+  color: black;
+}
+
+a {
+  color: black;
+}

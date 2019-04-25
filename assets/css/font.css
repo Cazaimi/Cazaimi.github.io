@@ -1,0 +1,14 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  color: black;
+}
+
+a {
+  text-decoration-line: none;
+  /* color: black   */
+}
+
+a:visited {
+  text-decoration-line: none;
+  /* color: black */
+}

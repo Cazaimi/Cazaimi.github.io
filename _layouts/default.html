@@ -1,0 +1,33 @@
+---
+lightTheme: ./assets/css/lightTheme.css
+darkTheme: ./assets/css/darkTheme.css
+footerCss: ./assets/css/footer.css
+headerCss: ./assets/css/header.css
+timerCss: ./assets/css/timer.css
+---
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/font.css">
+    <link rel="stylesheet" type="text/css" href={{ layout.darkTheme }}>
+    <link rel="stylesheet" type="text/css" href={{ layout.headerCss }}>
+    <link rel="stylesheet" type="text/css" href={{ layout.footerCss }}>
+    <link rel="stylesheet" type="text/css" href={{ layout.timerCss }}>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  </head>
+  <body>
+    <div id='topLevelContainer'>
+      <div id='belowHeaderContainer'>
+        {% include darktheme.html %}
+        {% include timer.html %}
+      </div>
+      {% include header.html %}
+      <div id="mainContentContainer">
+        {{ content }}
+      </div>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>
