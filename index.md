@@ -8,4 +8,4 @@ title: Cazaimi - Anmol Shukla
 ## Hi ! 👋
 
 ### I'm Anmol and I am a developer @ [Postman](https://www.getpostman.com "Postman"). I like building software and solving puzzles.
-### ...
+### . . .

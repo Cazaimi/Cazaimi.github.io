@@ -11,8 +11,9 @@
   flex: 1;
   flex-direction: row;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #siteMapLink {
