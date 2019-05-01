@@ -1,43 +1,62 @@
+var lightIcon = './assets/images/logos/luke.svg', 
+  darkIcon = './assets/images/logos/darth.svg',
+  dark = 'dark',
+  light = 'light',
+  icons = {
+    dark: {
+      twitter: 't-d.png',
+      github: 'gh-d.png',
+      linkedin: 'li-d.png',
+      youtube: 'yt-d.png',
+      email: 'email-d.svg'
+    },
+    light: {
+      twitter: 't-l.png',
+      github: 'gh-l.png',
+      linkedin: 'li-l.png',
+      youtube: 'yt-l.png',
+      email: 'email-l.svg'
+    }
+  }
+
 function setImageOnClick () {
   var img = document.getElementById('themeImage'),  
     link = document.getElementById('themeLink');
 
-  console.log(img, link);
-
   link.onclick = function (e) {
-    switchTheme(img);
+    var theme = !img.src.includes(darkIcon.slice(2)) ? dark : light;
+
+    switchTheme(theme, img);
   };
 }
 
-function switchTheme (img) {
+function switchTheme (theme, img) {
   var links = getLinkTags(),
     darkThemeLink = './assets/css/darkTheme.css',
     lightThemeLink = './assets/css/lightTheme.css';
-
-  console.log('links, Object.keys(links):', links, Object.keys(links));
 
   return Object.keys(links).forEach(function (link) {
     var currentLink = links[link],
       href = currentLink.href;
 
-    console.log('href:', href);
-    console.log('href.indexOf(Theme):', href.indexOf('Theme'));
+    if (href.indexOf('Theme') === -1) { 
+      return; 
+    }
 
-    if (href.indexOf('Theme') === -1) { console.log('here');
-     return; }
-
-    var dark = href.indexOf('dark') !== -1;
-
-    if (dark) {
-      img.src = './assets/images/logos/luke.svg';
+    if (theme === light) {
+      img.src = lightIcon;
       currentLink.href = lightThemeLink;
+
+      setTheme(light);
+      switchIconColor(light);
     }
     else {
-      img.src = './assets/images/logos/darth.svg';
+      img.src = darkIcon;
       currentLink.href = darkThemeLink;
-    }
 
-    console.log('href, links:', href, links);
+      setTheme(dark);
+      switchIconColor(dark);
+    }
 
     return;
   });
@@ -49,9 +68,57 @@ function getLinkTags () {
   return links;
 }
 
+function getTheme () {
+  var theme = localStorage.getItem('theme');
+
+  // default theme is always dark.
+  return theme ? theme : dark;
+}
+
+function setTheme (theme) {
+  localStorage.setItem('theme', theme);
+}
+
+function switchIconColor (theme) {
+  var contactIcons = document.getElementsByClassName('contactIcon'),
+    baseUrl = './assets/images/logos/'
+
+
+  console.log('contactIcons:', contactIcons);
+
+  // No switching required if there are no contact icons 
+  // in the page. 
+  if (!Object.keys(contactIcons).length) { return ; }
+
+  Object.keys(contactIcons).forEach(function (key) {
+    switch (contactIcons[key].id) {
+      case 'twitterIcon':
+        contactIcons[key].src = baseUrl.concat(icons[theme].twitter);
+        break;
+      case 'githubIcon':
+        contactIcons[key].src = baseUrl.concat(icons[theme].github);
+        break;
+      case 'linkedinIcon':
+        contactIcons[key].src = baseUrl.concat(icons[theme].linkedin);
+        break;
+      case 'youtubeIcon':
+        contactIcons[key].src = baseUrl.concat(icons[theme].youtube);
+        break;
+      case 'emailIcon':
+        contactIcons[key].src = baseUrl.concat(icons[theme].email);
+        break;
+      
+    }
+  });
+}
+
 function init () {
   setImageOnClick();
-  // getLinkTags();
+  
+  var theme = getTheme() === dark ? dark : light,
+    img = document.getElementById('themeImage');
+
+  switchTheme(theme, img)
 }
 
 init();
