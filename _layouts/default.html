@@ -1,6 +1,7 @@
 ---
 lightTheme: ./assets/css/lightTheme.css
 darkTheme: ./assets/css/darkTheme.css
+currentTheme: ./assets/css/darkTheme.css
 footerCss: ./assets/css/footer.css
 headerCss: ./assets/css/header.css
 timerCss: ./assets/css/timer.css
@@ -15,6 +16,7 @@ timerCss: ./assets/css/timer.css
     <link rel="stylesheet" type="text/css" href={{ layout.headerCss }}>
     <link rel="stylesheet" type="text/css" href={{ layout.footerCss }}>
     <link rel="stylesheet" type="text/css" href={{ layout.timerCss }}>
+    {{ page.pageSpecificCss }}
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
   </head>
   <body>
@@ -28,6 +30,7 @@ timerCss: ./assets/css/timer.css
         {{ content }}
       </div>
       {% include footer.html %}
+      {% include themeToggleScript.html%}
     </div>
   </body>
 </html>
