@@ -3,7 +3,7 @@ layout: default
 title: Cazaimi - Anmol Shukla
 ---
 
-# Anmol Shukla a.k.a Cazaimi
+# Anmol Shukla a.k.a. Cazaimi
 
 ## Hi ! 👋
 
