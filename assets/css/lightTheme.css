@@ -25,3 +25,10 @@ body {
 a {
   color: black;
 }
+
+
+#postMonth {
+  border-bottom: 2px;
+  border-bottom-style: dashed;
+  border-bottom-color: black;
+}

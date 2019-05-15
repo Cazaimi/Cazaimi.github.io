@@ -1,0 +1,10 @@
+#aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  min-width: 250px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 200%;
+}
