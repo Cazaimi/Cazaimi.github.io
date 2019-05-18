@@ -1,0 +1,34 @@
+- name: Very Simple FTP
+  description: A very simple protocol based on SOCKET API
+  tags:
+    - Sockets
+    - C
+  date: 2018-10-01
+  url: https://github.com/Cazaimi/Very-Simple-FTP
+
+- name: Lazy AF
+  description: An Android app that polls the clipboard for 6-digit OTPs and sends it as an email
+  tags:
+    - Android
+    - Java
+  date: 2019-03-01
+  url: https://github.com/Cazaimi/LazyAF
+
+- name: simpleMacTimer
+  description: A simple timer designed to work on Mac OS.
+  tags:
+    - Osx
+    - Javascript
+    - Bash
+    - Timer
+  date: 2019-05-02
+  url: https://github.com/Cazaimi/simpleMacTimer
+
+- name: Circadian API
+  description: My personal API to track circadian rhythm (https://en.wikipedia.org/wiki/Circadian_rhythm)
+  tags:
+    - NodeJS
+    - ExpressJS
+    - SQLite
+  date: 2019-05-07
+  url: https://github.com/Cazaimi/circadian-api

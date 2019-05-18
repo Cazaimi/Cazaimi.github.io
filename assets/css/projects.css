@@ -1,4 +1,4 @@
-#postContent {
+#projectContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,7 +7,7 @@
   min-width: 250px;
 }
 
-#postBlock {
+#projectBlock {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -16,7 +16,7 @@
   align-items: space-between;
 }
 
-#postYear {
+#projectYear {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -24,7 +24,7 @@
   align-items: space-between;
 }
 
-#postMonth {
+#projectMonth {
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -45,10 +45,24 @@
   flex: 1;
 }
 
-#post {
+#project {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
-  flex: 2;  
+  flex: 1;
+  text-align: right;
+}
+
+#projectLink {
+  text-decoration-line: underline;
+}
+
+#tag {
+  background-color: #DDEEFF;
+  color: black;
+  border-radius: 10%;
+  padding: 1%;
+  margin-left: 1%;
+  font-size: 0.75rem
 }

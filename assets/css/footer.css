@@ -5,6 +5,7 @@
   align-items: center;
   flex-wrap: wrap;
   height: 10%;
+  min-height: 10%;
 }
 
 #CCBYNC {

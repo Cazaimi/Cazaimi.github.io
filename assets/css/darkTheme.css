@@ -26,3 +26,15 @@ body {
 a {
   color: white;
 }
+
+#postMonth {
+  border-bottom: 2px;
+  border-bottom-style: dotted;
+  border-bottom-color: white;
+}
+
+#projectMonth {
+  border-bottom: 2px;
+  border-bottom-style: dotted;
+  border-bottom-color: white;
+}
