@@ -1,24 +1,24 @@
 ---
-lightTheme: ./assets/css/lightTheme.css
-darkTheme: ./assets/css/darkTheme.css
-currentTheme: ./assets/css/darkTheme.css
-footerCss: ./assets/css/footer.css
-headerCss: ./assets/css/header.css
-timerCss: ./assets/css/timer.css
+lightTheme: /assets/css/lightTheme.css
+darkTheme: /assets/css/darkTheme.css
+currentTheme: /assets/css/darkTheme.css
+footerCss: /assets/css/footer.css
+headerCss: /assets/css/header.css
+timerCss: /assets/css/timer.css
 ---
 <!DOCTYPE html>
 <html>
   <head>
     {% include analytics.html %}
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/font.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/font.css">
     <link rel="stylesheet" type="text/css" href={{ layout.darkTheme }}>
     <link rel="stylesheet" type="text/css" href={{ layout.headerCss }}>
     <link rel="stylesheet" type="text/css" href={{ layout.footerCss }}>
     <link rel="stylesheet" type="text/css" href={{ layout.timerCss }}>
     {{ page.pageSpecificCss }}
-    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
   </head>
   <body>

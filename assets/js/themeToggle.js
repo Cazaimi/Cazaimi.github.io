@@ -1,5 +1,5 @@
-var lightIcon = './assets/images/logos/luke.svg', 
-  darkIcon = './assets/images/logos/darth.svg',
+var lightIcon = '/assets/images/logos/luke.svg', 
+  darkIcon = '/assets/images/logos/darth.svg',
   dark = 'dark',
   light = 'light',
   icons = {
@@ -32,8 +32,8 @@ function setImageOnClick () {
 
 function switchTheme (theme, img) {
   var links = getLinkTags(),
-    darkThemeLink = './assets/css/darkTheme.css',
-    lightThemeLink = './assets/css/lightTheme.css';
+    darkThemeLink = '/assets/css/darkTheme.css',
+    lightThemeLink = '/assets/css/lightTheme.css';
 
   return Object.keys(links).forEach(function (link) {
     var currentLink = links[link],
@@ -81,7 +81,7 @@ function setTheme (theme) {
 
 function switchIconColor (theme) {
   var contactIcons = document.getElementsByClassName('contactIcon'),
-    baseUrl = './assets/images/logos/'
+    baseUrl = '/assets/images/logos/'
 
 
   console.log('contactIcons:', contactIcons);
