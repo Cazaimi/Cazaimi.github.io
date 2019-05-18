@@ -1,0 +1,46 @@
+---
+layout: postsHome
+title: Posts
+pageSpecificCss: <link rel="stylesheet" type="text/css" href="./assets/css/post.css">
+---
+{% assign var currentYear = 0 %}
+{% assign var currentMonth = 0 %}
+{% for post in site.posts  %}
+  {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% capture month %}{{ post.date | date: "%B" }}{% endcapture %}
+
+  {% if currentYear != year %}
+    {% if currentYear != 0 %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <div id='postBlock'>
+      <div id='postYear'>
+        <div id='year'><h2>{{ year }}</h2></div>
+      {% assign var currentYear = year %}
+      {% assign var currentMonth = 0 %}
+  {% endif %}
+  {% if currentMonth != month %}
+    {% if currentMonth != 0 %}
+        </div>
+      </div>
+    {% endif %}
+    <div id='postMonth'>
+      <div id='month'><h3>{{ month }}</h3></div>
+      <div id='post'>
+    {% assign var currentMonth = month %}
+  {% endif %}
+  <a id='postLink' href='{{ post.url }}'>
+    <p id='postTitle'>{{ post.title }}</p>
+  </a>
+{% endfor %}
+{% if site.posts[0] != nil %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% else %}
+<h2>No posts to display</h2>
+{% endif %}
