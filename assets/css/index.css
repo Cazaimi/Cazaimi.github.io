@@ -20,6 +20,7 @@ html, body {
 #belowHeaderContainer {
   display: flex;
   flex: 1;
+  min-height: 190px;
 }
 
 #mainContentContainer {

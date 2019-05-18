@@ -1,0 +1,54 @@
+---
+layout: projects
+title: Projects
+pageSpecificCss: <link rel="stylesheet" type="text/css" href="./assets/css/projects.css">
+---
+{% assign var currentYear = 0 %}
+{% assign var currentMonth = 0 %}
+{% for project in site.data.projects  %}
+  {% capture year %}{{ project.date | date: "%Y" }}{% endcapture %}
+  {% capture month %}{{ project.date | date: "%B" }}{% endcapture %}
+
+  {% if currentYear != year %}
+    {% if currentYear != 0 %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <div id='projectBlock'>
+      <div id='projectYear'>
+        <div id='year'><h2>{{ year }}</h2></div>
+      {% assign var currentYear = year %}
+      {% assign var currentMonth = 0 %}
+  {% endif %}
+  {% if currentMonth != month %}
+    {% if currentMonth != 0 %}
+        </div>
+      </div>
+    {% endif %}
+    <div id='projectMonth'>
+      <div id='month'><h3>{{ month }}</h3></div>
+      <div id='project'>
+    {% assign var currentMonth = month %}
+  {% endif %}
+  <a id='projectLink' href='{{ project.url }}' target="blank">
+    <h3 id='projectTitle'>{{ project.name }}</h3>
+  </a>
+  <div id='projectData'>
+    <p id='projectDescription'>{{ project.description }}</p>
+    <p id='projecTags'>
+      {% for tag in project.tags %}
+      <span id='tag'> {{ tag }}</span>
+      {% endfor %}
+    </p>
+  </div>
+{% endfor %}
+{% if site.data.projects[0] != nil %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% else %}
+<h2>No projects to display</h2>
+{% endif %}

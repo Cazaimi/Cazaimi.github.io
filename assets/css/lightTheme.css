@@ -26,9 +26,14 @@ a {
   color: black;
 }
 
-
 #postMonth {
   border-bottom: 2px;
-  border-bottom-style: dashed;
+  border-bottom-style: dotted;
+  border-bottom-color: black;
+}
+
+#projectMonth {
+  border-bottom: 2px;
+  border-bottom-style: dotted;
   border-bottom-color: black;
 }
