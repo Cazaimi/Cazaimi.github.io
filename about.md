@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About
-pageSpecificCss: <link rel="stylesheet" type="text/css" href="./assets/css/about.css">
+pageSpecificCss: <link rel="stylesheet" type="text/css" href="/assets/css/about.css">
 ---
 # About me
 

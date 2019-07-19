@@ -38,3 +38,7 @@ a {
   border-bottom-style: dotted;
   border-bottom-color: white;
 }
+
+#postMainContentContainer {
+  background-color: #1b2631 ;
+}
