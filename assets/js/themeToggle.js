@@ -8,14 +8,16 @@ var lightIcon = '/assets/images/logos/luke.svg',
       github: 'gh-d.png',
       linkedin: 'li-d.png',
       youtube: 'yt-d.png',
-      email: 'email-d.svg'
+      email: 'email-d.svg',
+      backArrow: 'back-d.svg'
     },
     light: {
       twitter: 't-l.png',
       github: 'gh-l.png',
       linkedin: 'li-l.png',
       youtube: 'yt-l.png',
-      email: 'email-l.svg'
+      email: 'email-l.svg',
+      backArrow: 'back-l.svg'
     }
   }
 
@@ -81,35 +83,36 @@ function setTheme (theme) {
 
 function switchIconColor (theme) {
   var contactIcons = document.getElementsByClassName('contactIcon'),
+    backArrowIcon = document.getElementById('backImage'),
     baseUrl = '/assets/images/logos/'
-
-
-  console.log('contactIcons:', contactIcons);
 
   // No switching required if there are no contact icons 
   // in the page. 
-  if (!Object.keys(contactIcons).length) { return ; }
+  if (Object.keys(contactIcons).length) {
+    Object.keys(contactIcons).forEach(function (key) {
+      switch (contactIcons[key].id) {
+        case 'twitterIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].twitter);
+          break;
+        case 'githubIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].github);
+          break;
+        case 'linkedinIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].linkedin);
+          break;
+        case 'youtubeIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].youtube);
+          break;
+        case 'emailIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].email);
+          break; 
+      }
+    });
+  }
 
-  Object.keys(contactIcons).forEach(function (key) {
-    switch (contactIcons[key].id) {
-      case 'twitterIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].twitter);
-        break;
-      case 'githubIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].github);
-        break;
-      case 'linkedinIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].linkedin);
-        break;
-      case 'youtubeIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].youtube);
-        break;
-      case 'emailIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].email);
-        break;
-      
-    }
-  });
+  if (backArrowIcon) {
+    backArrowIcon.src = baseUrl.concat(icons[theme].backArrow);
+  }
 }
 
 function init () {
