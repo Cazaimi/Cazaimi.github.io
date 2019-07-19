@@ -15,6 +15,7 @@ html, body {
   flex-direction: column;
   flex: 1;
   justify-content: space-between;
+  align-items: center;
 }
 
 #belowHeaderContainer {
@@ -25,6 +26,7 @@ html, body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 75%;
 }
 
 #backImage {
@@ -46,14 +48,15 @@ html, body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 2%;
+  border-radius: 5px;
+  width: 75%;
 }
 
 #postMainContentSubContainer {
   display: flex;
   flex-direction: column;
   flex: 1;
-  width: 60%;
+  width: 50%;
   min-width: 250px;
   text-align: justify;
   text-justify: inter-word;
@@ -68,13 +71,13 @@ h1 {
   line-height: 100%
 }
 
-p {
+/* p {
   padding-bottom: 2%;
-}
+} */
 
-p, li, ul {
+/* p, li, ul {
   font-size: 1.25rem;
-}
+} */
 
 #postTitleAndMeta {
   padding-bottom: 5%;
@@ -94,4 +97,19 @@ p, li, ul {
   padding: 1%;
   margin-left: 1%;
   font-size: 1rem
+}
+
+img {
+  width: 100%;
+}
+
+blockquote {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #02334f;
+  padding-left: 5%;
+}
+
+a {
+  text-decoration-line: underline;
 }
