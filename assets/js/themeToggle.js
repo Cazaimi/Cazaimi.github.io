@@ -1,5 +1,5 @@
-var lightIcon = './assets/images/logos/luke.svg', 
-  darkIcon = './assets/images/logos/darth.svg',
+var lightIcon = '/assets/images/logos/luke.svg', 
+  darkIcon = '/assets/images/logos/darth.svg',
   dark = 'dark',
   light = 'light',
   icons = {
@@ -8,14 +8,16 @@ var lightIcon = './assets/images/logos/luke.svg',
       github: 'gh-d.png',
       linkedin: 'li-d.png',
       youtube: 'yt-d.png',
-      email: 'email-d.svg'
+      email: 'email-d.svg',
+      backArrow: 'back-d.svg'
     },
     light: {
       twitter: 't-l.png',
       github: 'gh-l.png',
       linkedin: 'li-l.png',
       youtube: 'yt-l.png',
-      email: 'email-l.svg'
+      email: 'email-l.svg',
+      backArrow: 'back-l.svg'
     }
   }
 
@@ -32,8 +34,8 @@ function setImageOnClick () {
 
 function switchTheme (theme, img) {
   var links = getLinkTags(),
-    darkThemeLink = './assets/css/darkTheme.css',
-    lightThemeLink = './assets/css/lightTheme.css';
+    darkThemeLink = '/assets/css/darkTheme.css',
+    lightThemeLink = '/assets/css/lightTheme.css';
 
   return Object.keys(links).forEach(function (link) {
     var currentLink = links[link],
@@ -81,35 +83,36 @@ function setTheme (theme) {
 
 function switchIconColor (theme) {
   var contactIcons = document.getElementsByClassName('contactIcon'),
-    baseUrl = './assets/images/logos/'
-
-
-  console.log('contactIcons:', contactIcons);
+    backArrowIcon = document.getElementById('backImage'),
+    baseUrl = '/assets/images/logos/'
 
   // No switching required if there are no contact icons 
   // in the page. 
-  if (!Object.keys(contactIcons).length) { return ; }
+  if (Object.keys(contactIcons).length) {
+    Object.keys(contactIcons).forEach(function (key) {
+      switch (contactIcons[key].id) {
+        case 'twitterIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].twitter);
+          break;
+        case 'githubIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].github);
+          break;
+        case 'linkedinIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].linkedin);
+          break;
+        case 'youtubeIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].youtube);
+          break;
+        case 'emailIcon':
+          contactIcons[key].src = baseUrl.concat(icons[theme].email);
+          break; 
+      }
+    });
+  }
 
-  Object.keys(contactIcons).forEach(function (key) {
-    switch (contactIcons[key].id) {
-      case 'twitterIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].twitter);
-        break;
-      case 'githubIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].github);
-        break;
-      case 'linkedinIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].linkedin);
-        break;
-      case 'youtubeIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].youtube);
-        break;
-      case 'emailIcon':
-        contactIcons[key].src = baseUrl.concat(icons[theme].email);
-        break;
-      
-    }
-  });
+  if (backArrowIcon) {
+    backArrowIcon.src = baseUrl.concat(icons[theme].backArrow);
+  }
 }
 
 function init () {

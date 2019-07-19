@@ -3,7 +3,6 @@ lightTheme: /assets/css/lightTheme.css
 darkTheme: /assets/css/darkTheme.css
 currentTheme: /assets/css/darkTheme.css
 footerCss: /assets/css/footer.css
-headerCss: /assets/css/header.css
 timerCss: /assets/css/timer.css
 ---
 <!DOCTYPE html>
@@ -11,25 +10,42 @@ timerCss: /assets/css/timer.css
   <head>
     {% include analytics.html %}
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/font.css">
     <link rel="stylesheet" type="text/css" href={{ layout.darkTheme }}>
-    <link rel="stylesheet" type="text/css" href={{ layout.headerCss }}>
     <link rel="stylesheet" type="text/css" href={{ layout.footerCss }}>
     <link rel="stylesheet" type="text/css" href={{ layout.timerCss }}>
+    <link rel="stylesheet" type="text/css" href="/assets/css/post/base.css">
     {{ page.pageSpecificCss }}
     <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
   </head>
+
+
   <body>
     <div id='topLevelContainer'>
       <div id='belowHeaderContainer'>
-        {% include darktheme.html %}
-        {% include timer.html %}
+        <div id='backArrow'>
+          <a id='backLink' href='/posts.html'>
+            <img src='/assets/images/logos/back-d.svg' id='backImage'>
+          </a>
+        </div>
+        <div id='themeAndTime'>
+          {% include darktheme.html %}
+          {% include timer.html %}
+        </div>
       </div>
-      {% include header.html %}
-      <div id="mainContentContainer">
-        {{ content }}
+      <div id="postMainContentContainer">
+        <div id='postMainContentSubContainer'>
+          <div id='postTitleAndMeta'>
+            <h1 id='postTitle'>{{page.title}}</h1>
+            <h4 id='postMeta'>{{page.meta}}</h4>
+            Tags: 
+            {% for tag in page.tags %}
+              <span id='postTag'>{{tag}}</span>
+            {% endfor %}
+          </div>
+          {{ content }}
+        </div>
       </div>
       {% include footer.html %}
       {% include themeToggleScript.html%}
