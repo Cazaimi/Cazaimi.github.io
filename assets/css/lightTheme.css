@@ -39,5 +39,8 @@ a {
 }
 
 #postMainContentContainer {
-  background-color:  #fffde7 ;
+  background-color: #D8D8D8;
+  border-left-style: solid;
+  border-left-color:#C7C7C7;
+  border-left-width: 8px;
 }

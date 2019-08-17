@@ -40,5 +40,8 @@ a {
 }
 
 #postMainContentContainer {
-  background-color: #1b2631 ;
+  background-color: #383838;
+  border-left-style: solid;
+  border-left-color:#212121;
+  border-left-width: 8px;
 }
