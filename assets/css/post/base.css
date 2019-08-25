@@ -104,3 +104,8 @@ blockquote {
 a {
   text-decoration-line: underline;
 }
+
+.image-subtext {
+  margin-top: 2px;
+  text-align: center;
+}

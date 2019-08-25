@@ -45,3 +45,10 @@ a {
   border-left-color:#212121;
   border-left-width: 8px;
 }
+
+#postMainContentContainer pre {
+  background-color: #494949;
+  overflow: auto;
+  padding: 2%;
+  border-radius: 2px;
+}
