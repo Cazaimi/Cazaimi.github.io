@@ -44,3 +44,10 @@ a {
   border-left-color:#C7C7C7;
   border-left-width: 8px;
 }
+
+#postMainContentContainer pre {
+  background-color: #c5c5c5;
+  overflow: auto;
+  padding: 2%;
+  border-radius: 2px;
+}
