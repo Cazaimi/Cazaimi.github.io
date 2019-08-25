@@ -2,7 +2,6 @@ html, body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 100%;
   width: 100%;
   margin: 0;
   align-items: center;
@@ -49,7 +48,7 @@ html, body {
   justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
-  width: 75%;
+  min-width: 75%;
 }
 
 #postMainContentSubContainer {
@@ -70,14 +69,6 @@ h1 {
   font-size: 4rem;
   line-height: 100%
 }
-
-/* p {
-  padding-bottom: 2%;
-} */
-
-/* p, li, ul {
-  font-size: 1.25rem;
-} */
 
 #postTitleAndMeta {
   padding-bottom: 5%;
@@ -112,4 +103,9 @@ blockquote {
 
 a {
   text-decoration-line: underline;
+}
+
+.image-subtext {
+  margin-top: 2px;
+  text-align: center;
 }

@@ -1,18 +1,20 @@
-- name: Very Simple FTP
-  description: A very simple protocol based on SOCKET API
+- name: Postman environment generator
+  description: An NodeJS app that creates a Postman environment for all the variable names in your Postman collection.
   tags:
-    - Sockets
-    - C
-  date: 2018-10-01
-  url: https://github.com/Cazaimi/Very-Simple-FTP
+    - NodeJS
+    - Postman-Environment
+    - Postman-Collection
+  date: 2019-07-26
+  url: https://github.com/Cazaimi/postman-environment-generator
 
-- name: Lazy AF
-  description: An Android app that polls the clipboard for 6-digit OTPs and sends it as an email
+- name: Circadian API
+  description: My personal API to track circadian rhythm (https://en.wikipedia.org/wiki/Circadian_rhythm)
   tags:
-    - Android
-    - Java
-  date: 2019-03-01
-  url: https://github.com/Cazaimi/LazyAF
+    - NodeJS
+    - ExpressJS
+    - SQLite
+  date: 2019-05-07
+  url: https://github.com/Cazaimi/circadian-api
 
 - name: simpleMacTimer
   description: A simple timer designed to work on Mac OS.
@@ -24,11 +26,19 @@
   date: 2019-05-02
   url: https://github.com/Cazaimi/simpleMacTimer
 
-- name: Circadian API
-  description: My personal API to track circadian rhythm (https://en.wikipedia.org/wiki/Circadian_rhythm)
+- name: Lazy AF
+  description: An Android app that polls the clipboard for 6-digit OTPs and sends it as an email
   tags:
-    - NodeJS
-    - ExpressJS
-    - SQLite
-  date: 2019-05-07
-  url: https://github.com/Cazaimi/circadian-api
+    - Android
+    - Java
+  date: 2019-03-01
+  url: https://github.com/Cazaimi/LazyAF
+
+
+- name: Very Simple FTP
+  description: A very simple protocol based on SOCKET API
+  tags:
+    - Sockets
+    - C
+  date: 2018-10-01
+  url: https://github.com/Cazaimi/Very-Simple-FTP
