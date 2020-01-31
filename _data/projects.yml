@@ -1,3 +1,12 @@
+- name: W3b-crwlr
+  description: A Concurrent web crawler written in Node
+  tags:
+    - NodeJS
+    - web-crawler
+    - multithreading
+  date: 2020-01-29
+  url: https://github.com/Cazaimi/W3b-crwlr
+
 - name: Postman environment generator
   description: An NodeJS app that creates a Postman environment for all the variable names in your Postman collection.
   tags:
