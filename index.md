@@ -7,5 +7,7 @@ title: Cazaimi - Anmol Shukla
 
 ## Hi ! 👋
 
-### I'm Anmol and I am a developer @ [Postman](https://www.getpostman.com "Postman"). I like building software and solving puzzles.
+### I'm Anmol and I am a Software developer. I like building software and solving puzzles.
+### I've previously worked @:
+* [Postman](https://www.getpostman.com "Postman")
 ### . . .
