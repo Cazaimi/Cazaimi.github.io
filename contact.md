@@ -17,7 +17,7 @@ pageSpecificCss: <link rel="stylesheet" type="text/css" href="/assets/css/contac
     <p>Github</p>
   </div>
   <div id='contactGroup'>
-    <a id='contactLink' target='blank' href='https://www.linkedin.com/in/anmol-shukla-974a33116/'>
+    <a id='contactLink' target='blank' href='https://www.linkedin.com/in/anmol01shukla/'>
       <img src='/assets/images/logos/In-l-128.png' class='contactIcon' id='linkedinIcon'>
     </a>
     <p>LinkedIn</p>
