@@ -1,15 +1,19 @@
 ---
 layout: default
-title: Cazaimi - Anmol Shukla
+title: Cazaimi - Ano Shukla
 ---
 
-# Anmol Shukla a.k.a. Cazaimi
+# Anmol (Ano) Shukla a.k.a. Cazaimi
 
 ## Hi ! 👋
 
-### I'm Anmol and a graduate student at [Virginia Tech](https://vt.edu), Fall 2022. I am going to be majoring in Computer Science. I like building software and solving puzzles.
+### I'm Ano. I work at at [Meta](https://meta.com) as a software engineer. I like building software and solving puzzles.
 
 ### I've previously worked @:
 * [Postman](https://www.getpostman.com "Postman")
 * [Zalando SE](https://zalando.de "Zalando")
-### . . .
+* [ASML](https://asml.com "ASML")
+### 
+
+#### What is Cazaimi? ####
+##### It's just a silly-sounding nick-name that I came up with in College #####. . .
