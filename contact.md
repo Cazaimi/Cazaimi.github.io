@@ -5,10 +5,10 @@ pageSpecificCss: <link rel="stylesheet" type="text/css" href="/assets/css/contac
 ---
 <div id='contactGroupGroup'>
   <div id='contactGroup'>
-    <a id='contactLink' target='blank' href='https://twitter.com/opiumanmol'>
-      <img src='/assets/images/logos/t-l.png' class='contactIcon' id='twitterIcon'>
+    <a id='contactLink' target='blank' href='https://instagram.com/ano.dommini'>
+      <p class='contactIcon' id='twitterIcon'>IG</p>
     </a>
-    <p>Twitter</p>
+    <p>Instagram</p>
   </div>
   <div id='contactGroup'>
     <a id='contactLink' target='blank' href='https://github.com/Cazaimi'>
@@ -17,7 +17,7 @@ pageSpecificCss: <link rel="stylesheet" type="text/css" href="/assets/css/contac
     <p>Github</p>
   </div>
   <div id='contactGroup'>
-    <a id='contactLink' target='blank' href='https://www.linkedin.com/in/anmol01shukla/'>
+    <a id='contactLink' target='blank' href='https://www.linkedin.com/in/ano01/'>
       <img src='/assets/images/logos/In-l-128.png' class='contactIcon' id='linkedinIcon'>
     </a>
     <p>LinkedIn</p>
