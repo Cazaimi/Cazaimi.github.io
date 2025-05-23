@@ -13,7 +13,8 @@ title: Cazaimi - Ano Shukla
 * [ASML](https://asml.com "ASML Inc.")
 * [Zalando SE](https://zalando.de "Zalando")
 * [Postman](https://www.getpostman.com "Postman")
-### 
 
-#### What is Cazaimi? ####
-##### It's just a silly-sounding nick-name that I came up with in College #####. . .
+
+#### What is Cazaimi?
+##### It's just a silly-sounding nickname that I came up with in college
+. . .
