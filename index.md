@@ -7,12 +7,12 @@ title: Cazaimi - Ano Shukla
 
 ## Hi ! 👋
 
-### I'm Ano. I work at at [Meta](https://meta.com) as a software engineer. I like building software and solving puzzles.
+### I'm Ano. I work at [Meta](https://meta.com) as a software engineer. I like building software and solving puzzles.
 
 ### I've previously worked @:
-* [Postman](https://www.getpostman.com "Postman")
+* [ASML](https://asml.com "ASML Inc.")
 * [Zalando SE](https://zalando.de "Zalando")
-* [ASML](https://asml.com "ASML")
+* [Postman](https://www.getpostman.com "Postman")
 ### 
 
 #### What is Cazaimi? ####
